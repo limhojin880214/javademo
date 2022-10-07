@@ -15,28 +15,19 @@ public class Java045_array {
 		String[] name = { "홍길동", "이영희" }; // String[] name = new String[]{"홍길동", "이영희"};
 		int[][] jumsu = { { 90, 85, 40 }, { 100, 35, 75 } }; // int[][] jumsu = new int[][]{{90,85,40}, {100, 35,75}};
 
-		for (int i = 0; i < jumsu.length; i++) {
+		//int sum = 0;
+		for(int index=0;index<name.length;index++) {
+			System.out.printf("%8s", name[index]);
+			
 			int sum = 0;
-			double avg = 0.0;
-			// 이름
-			System.out.printf("%5s", name[i]);
-
-			// 점수
-			for (int j = 0; j < jumsu[i].length; j++) {
-				System.out.printf("%5d", jumsu[i][j]);
+			for(int col=0; col<3; col++) {
+				System.out.printf("%4d", jumsu[index][col]);
+				sum += jumsu[index][col];
 			}
-
-			// 합계
-			for (int j = 0; j < jumsu[i].length; j++) {
-				sum += jumsu[i][j];
-			}
-			System.out.printf("%5s", sum);
-
-			// 평균
-			avg = sum / (double) jumsu[i].length;
-			System.out.printf("%5.1f", avg);
-
-			System.out.println();
+			//System.out.printf("%4d %6.1f\n", sum, (double)sum/jumsu[index].length);
+			//System.out.printf("%4d %6.1f\n", sum, sum/3.0);
+			System.out.printf("%4d %6.1f\n", sum, (double)sum/3);
+			
 		}
 
 	}// end main()

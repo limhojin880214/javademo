@@ -25,8 +25,8 @@ package java004_array.prob;
 public class Prob_05 {
 
 	public static void main(String[] args) {
-		String[] sname = new String[] {"소원", "예린", "은하", "유주", "신비"};
-		int[][] sscore = new int[][] {
+		String[] student = new String[] {"소원", "예린", "은하", "유주", "신비"};
+		int[][] quiz = new int[][] {
 			{1, 3, 2, 4, 3, 1, 4, 2, 2, 1},
 			{3, 2, 4, 2, 2, 1, 1, 3, 4, 1},
 			{2, 4, 3, 2, 1, 2, 1, 3, 3, 4},
@@ -36,14 +36,14 @@ public class Prob_05 {
 		int[] answer = new int[] {1, 2, 3, 4, 4, 3, 2, 1, 1, 2};
 		
 		
-		for(int i=0;i<sname.length;i++) {
-			int cnt= 0;
-			for(int j=0; j<sscore[i].length;j++) {
-				if(answer[j] == sscore[i][j]) {
-					cnt++;
+		for(int i=0;i<student.length;i++) {
+			int score= 0;
+			for(int j=0; j<quiz[i].length;j++) {
+				if(answer[j] == quiz[i][j]) {
+					score++;
 				}
 			}
-			System.out.printf("%s 점수 : %d점\n", sname[i], cnt);			
+			System.out.printf("%s 점수 : %d점\n", student[i], score);			
 		}
 
 		

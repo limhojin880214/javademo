@@ -38,8 +38,30 @@ public class Prob007_method {
 		// 구현하시오.
 		
 		//1. 내림차순
-		int[] arr  = new int[array.length];
-			
-		return arr;
+//		if(orderby == "desc" ) {
+			for(int i = 1; i<array.length;i++) {
+				for(int j = 0; j<array.length;j++) {
+					if(array[i] > array[j]) {
+						int temp = array[i];
+						array[i] = array[j];
+						array[j] = temp;
+					}
+				}
+			}
+			return array;
+//		}else {
+//			for(int i = 1; i<array.length;i++) {
+//				for(int j = 0; j<array.length;j++) {
+//					if(array[i] < array[j]) {
+//						int temp = array[i];
+//						array[i] = array[j];
+//						array[j] = temp;
+//					}
+//				}
+//			}
+//			return array;
+//		}
+		
+		
 	}// end sort( )
 }//end class

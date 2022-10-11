@@ -12,8 +12,9 @@ public class Java063_method {
 	//최대값
 	public static int max(int[] arr) {
 		int res = arr[0];
-		for(int i=0;i <arr.length;i++) {
-			if(res - arr[i] < 0) res =arr[i];
+		for(int i=1;i <arr.length;i++) {
+//			if(res - arr[i] < 0) res =arr[i];
+			if(res < arr[i]) res = arr[i]; 
 		}
 		return res;
 	}//end max()
@@ -21,15 +22,15 @@ public class Java063_method {
 	//최소값
 	public static int min(int[] arr) {
 		int res = arr[0];
-		for(int i=0;i <arr.length;i++) {
+		for(int i=1;i <arr.length;i++) {
 			if(res - arr[i] > 0) res =arr[i];
 		}
 		return res;
 	}//end min()
 	
 	//배열의 크기
-	public static int size(int[] num) {
+	public static int size(int[] arr) {
 		
-		return num.length;
+		return arr.length;
 	}//end size()
 }//end class

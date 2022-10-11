@@ -23,7 +23,7 @@ public class Java062_method {
 	public static String rs(int tot) {
 		//tot매개변수의 값이 800이상이면 "합격", 미만이면 "불합격" 리턴하는 메소드 구현
 		return tot >= 800 ? "합격" : "불합격";
-//		if(tot > 800) {
+//		if(tot >= 800) {
 //			return "합격";
 //		}else {
 //			return "불합격";

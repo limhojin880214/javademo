@@ -36,32 +36,60 @@ public class Prob007_method {
 
 	private static int[] sort(int[] array, String orderby) {
 		// 구현하시오.
-		
-		//1. 내림차순
-//		if(orderby == "desc" ) {
-			for(int i = 1; i<array.length;i++) {
-				for(int j = 0; j<array.length;j++) {
-					if(array[i] > array[j]) {
-						int temp = array[i];
-						array[i] = array[j];
-						array[j] = temp;
-					}
-				}
-			}
-			return array;
-//		}else {
-//			for(int i = 1; i<array.length;i++) {
-//				for(int j = 0; j<array.length;j++) {
-//					if(array[i] < array[j]) {
-//						int temp = array[i];
-//						array[i] = array[j];
-//						array[j] = temp;
+//		if (orderby == "desc") {
+//			int[] desc = new int[array.length];
+//			for (int i = 0; i < array.length; i++) {
+//				desc[i] = array[i];
+//			}
+//			for (int i = 0; i < desc.length; i++) {
+//				for (int j = 0; j < desc.length; j++) {
+//					if (desc[i] > desc[j]) {
+//						int temp = desc[i];
+//						desc[i] = desc[j];
+//						desc[j] = temp;
 //					}
 //				}
 //			}
-//			return array;
+//			return desc;
+//		} else {
+//			int[] asc = new int[array.length];
+//			for (int i = 0; i < array.length; i++) {
+//				asc[i] = array[i];
+//			}
+//			for (int i = 0; i < asc.length; i++) {
+//				for (int j = 0; j < asc.length; j++) {
+//					if (asc[i] < asc[j]) {
+//						int temp = asc[i];
+//						asc[i] = asc[j];
+//						asc[j] = temp;
+//					}
+//				}
+//			}
+//			return asc;
 //		}
-		
+
+		int[] arr = new int[array.length];
+		for (int i = 0; i < array.length; i++) {
+			arr[i] = array[i];
+		}
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				if(orderby == "desc") {
+					if (arr[i] > arr[j]) {
+						int temp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = temp;
+					}
+				}else {
+					if (arr[i] < arr[j]) {
+						int temp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+		}
+		return arr;
 		
 	}// end sort( )
-}//end class
+}// end class

@@ -16,12 +16,9 @@ public class Prob005_method {
 		int cnt = 0;
 		int sum = 0;
 		for (int i = 0; i < data.length; i++) {
-			
-
 			if ((data[i] % 2 != 0) && (data[i] % 5 != 0)) {
 				cnt++;
 				sum += data[i];
-
 			}
 		}
 

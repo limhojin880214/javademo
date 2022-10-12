@@ -23,7 +23,7 @@ class Office {
 	public Office(int num, int jumsu) {
 		this.num = num;
 		this.jumsu = jumsu;
-		this.chk = chk;
+		
 		
 	}
 

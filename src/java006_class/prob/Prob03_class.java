@@ -22,11 +22,11 @@ class Box {
 		this.height = height;
 	}
 
-	public void draw(char c) { // 박스 그리는 메소드
+	public void draw() { // 박스 그리는 메소드
 		///////////// 여기에서 구현하세요.
 		for(int i =0; i<this.height; i++) {
 			for(int j = 0; j<this.width; j++) {
-				System.out.printf("%c", c);
+				System.out.print(fillChar);
 			}
 			System.out.println();
 		}
@@ -46,9 +46,11 @@ public class Prob03_class {
 	public static void main(String[] args) {
 		//여기를  구현하세요.
 		Box b1 = new Box();
-		b1.draw('&');
+		b1.fill('&');
+		b1.draw();
 		Box b2 = new Box(20, 3);
-		b2.draw('%');
+		b2.fill('%');
+		b2.draw();
 	}//end main()
 
 }//end class

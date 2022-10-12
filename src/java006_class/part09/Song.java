@@ -26,7 +26,12 @@ public class Song {
 		System.out.println("노래제목: " + title);
 		System.out.println("가수: " + artist);
 		System.out.println("앨범: " + album);
-		System.out.println("작곡가: " + composer());
+//		System.out.println("작곡가: " + composer());
+		System.out.printf("작곡가:");
+		for(int i=0;i<composer.length;i++) {
+			char chk = i<composer.length-1 ? ',' : '\n';
+			System.out.printf(" %s%s", composer[i],chk);
+		}
 		System.out.println("년도: " + year);
 		System.out.println("트랙: " + track);
 	}

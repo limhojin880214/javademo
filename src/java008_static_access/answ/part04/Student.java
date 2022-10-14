@@ -1,4 +1,4 @@
-package java008_static_access.prob.part04;
+package java008_static_access.answ.part04;
 
 /*
 -name:String
@@ -22,7 +22,6 @@ public class Student {
 	
 	public Student() {
 	}
-
 	public Student(String name, int kor, int mat, int eng) {
 		this.name = name;
 		this.kor = kor;
@@ -32,54 +31,46 @@ public class Student {
 	public String getName() {
 		return name;
 	}
-	public int getKor() {
-		return kor;
-	}
-	public int getMat() {
-		return mat;
-	}
-	public int getEng() {
-		return eng;
-	}
-	
 	public void setName(String name) {
 		this.name = name;
+	}
+	public int getKor() {
+		return kor;
 	}
 	public void setKor(int kor) {
 		this.kor = kor;
 	}
+	public int getMat() {
+		return mat;
+	}
 	public void setMat(int mat) {
 		this.mat = mat;
+	}
+	public int getEng() {
+		return eng;
 	}
 	public void setEng(int eng) {
 		this.eng = eng;
 	}
-	
+	@Override
 	public String toString() {
-		return String.format("%s의 점수는 %d 이며, 평균은 %f이고 학점은 %c입니다\n", name, getTotal(), getAvg(), getGrade());
+		return name + "의 점수는 " + getTotal() +"점 이며, 평균은 " + getAvg() 
+				  +"이고 학점은 " + getGrade() +"입니다";
 	}
-	
-	public int getTotal() {
-		return kor+eng+mat;
+	public int getTotal(){
+		return  kor+eng+mat;
 	}
-	
-	public double getAvg() {
-		return getTotal()/3.0;
+	public double getAvg(){
+		return  (double)getTotal()/3;
 	}
-	
-	public char getGrade() {
-		if(getAvg() >=90 ) {
-			return 'A';
-		}else if(getAvg() >=80 ) {
-			return 'B';
-		}else if(getAvg() >=70 ) {
-			return 'C';
-		}else if(getAvg() >=60 ) {
-			return 'D';
-		}else {
-			return 'F';
+	public char getGrade(){
+		switch((int)getAvg()/10)
+		{
+		case 10: case 9: return 'A';
+		case 8:            return 'B';
+		case 7:            return 'C';
+		case 6:            return 'D';
+		default:           return 'F';
 		}
 	}
-	
-	
 }

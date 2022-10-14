@@ -22,7 +22,7 @@ public class Prob02_inheritance {
 	public static void main(String args[]) {
 		//테스트를 할때 아래 주석을 해제하세요.
 		
-		/*
+
 		StudentExam se[]=new StudentExam[3];
 		se[0]=new StudentExam("홍길동",15,171, 81, "201101");
 		se[1]=new StudentExam("정길동",13,183, 72, "201102");
@@ -32,7 +32,7 @@ public class Prob02_inheritance {
 		
 		for(StudentExam sm : se)
 		System.out.println(sm.toString());
-		*/
+
 	}//end main()
 }//end class
 

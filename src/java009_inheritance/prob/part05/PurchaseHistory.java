@@ -13,7 +13,7 @@ public class PurchaseHistory extends Concert{
 	
 	@Override
 	public String toString() {
-		return String.format("%s %s %s %d %d", super.title, super.place, super.grade, super.price, quantity);
+		return String.format("%s\t%s\t%s\t%d\t%d", super.title, super.place, super.grade, super.price, quantity);
 	}
 	
 }

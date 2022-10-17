@@ -18,7 +18,7 @@ public class Prob003_binding {
 
 	public static void main(String[] args) {
 		Employee[] ee = new Employee[] {
-				new FullTime("홍길동","영업부", 450000, 1000), 
+				new FullTime("홍길동", "영업부", 450000, 1000), 
 				new PartTime("갑동이", "기획부", 20, 10000)
 				};
 				

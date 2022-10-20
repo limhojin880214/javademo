@@ -39,18 +39,35 @@ public class Prob004_Calendar {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, month-1);
-		int date = 1;	//if 그 달의 마지막 날까지 ++
+		//날짜
+		int date = 1;
+		
 		//첫째날 요일
 		cal.set(Calendar.DATE, 1);
-		System.out.println(cal.get(Calendar.DAY_OF_WEEK));
+		int day = cal.get(Calendar.DAY_OF_WEEK);
 		
 		//마지막날
 		int lastDate = cal.getActualMaximum(Calendar.DATE);
-		System.out.println(lastDate);
-		for(int i = 0; i<data.length;i++) {
-			for(int j = 0; j<data[i].length;j++) {
-				data[i][j] = date;
+
+		//첫번째 주
+		for(int j = 0; j<data[0].length;j++) {
+			if(j <= day-2) {
+				data[0][j] = 0;
+			}else {
+				data[0][j] = date;
 				date++;
+			}
+		}
+		
+		//나머지 주
+		for(int i = 1; i<data.length;i++) {
+			for(int j = 0; j<data[i].length;j++) {
+				if(lastDate >= date) {
+					data[i][j] = date;
+					date++;
+				}else {
+					data[i][j] = 0;
+				}
 			}
 		}
 		
@@ -63,10 +80,13 @@ public class Prob004_Calendar {
 		System.out.println("  일    월    화    수    목    금    토");
 		for(int i = 0; i<arr.length;i++) {
 			for(int j = 0; j<arr[i].length;j++) {
-				System.out.printf("%5d" ,arr[i][j]);
-				if(j % 7 == 6) {
+				if(arr[i][j] == 0) {
+					System.out.printf("%5s" ," ");
+				}else {
+					System.out.printf("%5d" ,arr[i][j]);
+				}		
+				if(j % 7 == 6) 
 					System.out.println();
-				}
 			}
 		}
 		

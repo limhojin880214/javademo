@@ -19,7 +19,10 @@ public class Prob006_String {
 	}
 	
 	public static char toChar(int x){
-
+		if(x<97 || x >122) {
+			System.out.println("범위가 틀렸습니다.");
+			return 0;
+		}
 		return (char)x; 
 	}
 	

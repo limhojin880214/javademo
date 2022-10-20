@@ -29,7 +29,7 @@ public class Prob002_String {
 			}
 		}
 		
-		System.out.println(data);
+		//System.out.println(data);
 		System.out.println("source : " + data);
 		System.out.println("convert : " + convert);
 		System.out.println("length : "+ data.length());

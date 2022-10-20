@@ -18,10 +18,10 @@ package java014_api.prob;
 public class Prob002_String {
 	
 	public static void main(String[] args) {
-		String data = args[0] + " "+ args[1];
-		StringBuffer sb = new StringBuffer(data);
+		String source = args[0] + " "+ args[1];
+		StringBuffer sb = new StringBuffer(source);
 		String convert = "";
-		for(char cn : data.toCharArray()) {
+		for(char cn : source.toCharArray()) {
 			if(Character.isUpperCase(cn)) {
 				convert += Character.toLowerCase(cn);
 			}else {
@@ -30,9 +30,9 @@ public class Prob002_String {
 		}
 		
 		//System.out.println(data);
-		System.out.println("source : " + data);
+		System.out.println("source : " + source);
 		System.out.println("convert : " + convert);
-		System.out.println("length : "+ data.length());
+		System.out.println("length : "+ source.length());
 		System.out.println("reverse : " + sb.reverse());
 		
 	}

@@ -49,13 +49,13 @@ public class Prob004_Calendar {
 		//마지막날
 		int lastDate = cal.getActualMaximum(Calendar.DATE);
 
-
 		//첫번째 주
 		for(int j = 0; j<data[0].length;j++) {
 			if(j <= day-2) {
 				data[0][j] = 0;
 			}else {
 				data[0][j] = date;
+				date++;
 			}
 		}
 		

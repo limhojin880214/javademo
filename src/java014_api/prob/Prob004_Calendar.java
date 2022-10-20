@@ -49,6 +49,7 @@ public class Prob004_Calendar {
 		System.out.println(lastDate);
 		for(int i = 0; i<data.length;i++) {
 			for(int j = 0; j<data[i].length;j++) {
+				
 				data[i][j] = date;
 				date++;
 			}

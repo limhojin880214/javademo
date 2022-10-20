@@ -40,6 +40,13 @@ public class Prob004_Calendar {
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, month-1);
 		int date = 1;	//if 그 달의 마지막 날까지 ++
+		//첫째날 요일
+		cal.set(Calendar.DATE, 1);
+		System.out.println(cal.get(Calendar.DAY_OF_WEEK));
+		
+		//마지막날
+		int lastDate = cal.getActualMaximum(Calendar.DATE);
+		System.out.println(lastDate);
 		for(int i = 0; i<data.length;i++) {
 			for(int j = 0; j<data[i].length;j++) {
 				data[i][j] = date;
@@ -54,9 +61,12 @@ public class Prob004_Calendar {
 		System.out.printf("%10d년도  %6d월\n", year, month);
 
 		System.out.println("  일    월    화    수    목    금    토");
-		for(int[] data : arr) {
-			for(int data1 : data) {
-				System.out.println(data1);
+		for(int i = 0; i<arr.length;i++) {
+			for(int j = 0; j<arr[i].length;j++) {
+				System.out.printf("%5d" ,arr[i][j]);
+				if(j % 7 == 6) {
+					System.out.println();
+				}
 			}
 		}
 		

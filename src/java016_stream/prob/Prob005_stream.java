@@ -36,11 +36,13 @@ public class Prob005_stream {
 		 */
 	
 		try(Scanner sc = new Scanner(new File(fileName))){
+			
 			while(sc.hasNextLine()) {
-				String[] data = sc.nextLine().split("\r\n");
-				//System.out.println(data);
-				return data;
+				String data = sc.nextLine();
+				//System.out.println(data);	
 			}
+			
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

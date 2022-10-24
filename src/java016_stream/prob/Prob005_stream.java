@@ -35,29 +35,39 @@ public class Prob005_stream {
 		 * 라인씩 저장해서 반환한다.
 		 */
 	
-		try(Scanner sc = new Scanner(new File(fileName))){
-			
-			while(sc.hasNextLine()) {
-				String data = sc.nextLine();
-				//System.out.println(data);	
-			}
-			
-			
+		FileReader fr = null;
+		BufferedReader br = null;
+		String[] sn = null;
+		File file = new File(fileName);
+		try {
+			fr = new FileReader(file);
+			br = new BufferedReader(fr);
+
+			Stream<String> aa = br.lines();
+			Object[] line = aa.toArray();
+			sn = new String[line.length];
+			for (int i = 0; i < sn.length; i++)
+				sn[i] = (String) line[i];
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				br.close();
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
-
-		return null;
+		return sn;
 	}// end readLines()
 
 	public static void printLine(String line) {
 		/*
 		 * 문자열을 받아들여 ‘\t’와 ‘ ‘을 ‘-‘ 로 변환하여 콘솔에 출력한다.
 		 */
-		char[] data = line.toCharArray();
-		for(char d : data) {
-			System.out.println(d);
-		}
+		System.out.println(line.replaceAll("[\t ]", "-"));
 		
 	}// end printLine()
 }// end class

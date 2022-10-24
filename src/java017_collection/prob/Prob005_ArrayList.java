@@ -40,7 +40,7 @@ public class Prob005_ArrayList {
 				tv.setRating(Double.parseDouble(data[3]));
 				aList.add(tv);
 			}
-
+			
 			prnDisplay(aList, "MBC");
 			prnDisplay(aList, "KBS1");
 			prnDisplay(aList, "KBS2");

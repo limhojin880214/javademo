@@ -9,7 +9,7 @@ public class BookManager {
 		// 구현하세요.
 		int sum = 0;
 		for(BookDTO it :bookList) {
-			if(it.getKind() == kind) {
+			if(it.getKind().equals(kind)) {
 				sum += it.getRentalPrice();
 			}
 		}

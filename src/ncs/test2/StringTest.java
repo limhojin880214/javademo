@@ -1,4 +1,4 @@
-package ncs.test02;
+package ncs.test2;
 
 public class StringTest {
 	public static void main(String args[]) {
@@ -8,6 +8,7 @@ public class StringTest {
 		// str에서 데이터를 분리한다.
 		String[] st = str.split(","); 
 		
+		//합계
 		for(int i = 0; i<st.length;i++){ 
 			sum += Double.parseDouble(st[i]);
 		} 

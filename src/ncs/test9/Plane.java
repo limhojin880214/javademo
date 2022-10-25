@@ -9,14 +9,9 @@ abstract class Plane {
 	}
 
 	public Plane(String planeName, int fuelSize) {
-
 		this.planeName = planeName;
 		this.fuelSize = fuelSize;
 	}
-	
-	
-	
-	
 	
 	public String getPlaneName() {
 		return planeName;
@@ -35,7 +30,7 @@ abstract class Plane {
 	}
 
 	public void refuel(int fuel) {
-		
+		System.out.printf("%s\t%d\n", planeName, this.fuelSize += fuel);
 	}
 	
 	public void flight(int distance) {

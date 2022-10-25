@@ -7,11 +7,11 @@ public class Airplane extends Plane{
 	}
 	
 	public Airplane(String planeName, int fuelSize) {
-		
+		super(planeName, fuelSize);
 	}
 	
 	public void flight(int distance) {
-		System.out.println(distance + "운항");
-		//fuelSize -= distance/10 * 30;
+		setFuelSize(getFuelSize()-(distance/10*30));
+		System.out.printf("%s\t%d\n", getPlaneName(), getFuelSize() );
 	}
 }

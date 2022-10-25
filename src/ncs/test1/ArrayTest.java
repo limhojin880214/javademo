@@ -1,4 +1,4 @@
-package ncs.test01;
+package ncs.test1;
 
 public class ArrayTest {
 

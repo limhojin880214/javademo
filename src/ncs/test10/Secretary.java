@@ -11,10 +11,10 @@ public class Secretary extends Employee implements Bonus{
 	}
 	
 	public double tax() {
-		return 0;
+		return this.getSalary()*0.1;
 	}
 	
 	public void incentive(int pay) {
-		
+		System.out.printf("%-10s %-10s %10d", getName(), getDepartment(), getSalary()*1.8, tax() );
 	}
 }

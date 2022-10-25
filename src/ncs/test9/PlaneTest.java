@@ -22,13 +22,18 @@ public class PlaneTest {
 		System.out.println("----------------");
 		System.out.printf("%s\t%d\n", ap.getPlaneName(), ap.getFuelSize());
 		System.out.printf("%s\t%d\n", cp.getPlaneName(), cp.getFuelSize());
+		
 		int flight = 100;
 		System.out.println(flight + " 운항");
-		ap.flight(100);
-		cp.flight(100);
 		System.out.printf("%s\t%s\n", "Plane", "fuelSize");
 		System.out.println("----------------");
-		
-		
+		ap.flight(flight);
+		cp.flight(flight);
+		int re = 200;
+		System.out.println(re + " 주유");
+		System.out.printf("%s\t%s\n", "Plane", "fuelSize");
+		System.out.println("----------------");
+		ap.refuel(re);
+		cp.refuel(re);
 	}
 }

@@ -16,5 +16,10 @@ public class Fruit {
 		this.quantity = quantity;
 	}
 	
+	@Override
+	public String toString() {
+	
+		return String.format("%s, %d원, %d개", name, price, quantity);
+	}
 	
 }

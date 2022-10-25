@@ -40,6 +40,9 @@ public class Product {
 	}
 	
 	public String information() {
-		return "총 구매 가격 : " + Integer.toString(getPrice() * getQuantitiy()) + "원";
+		return "상품명 : " + getName() +"\n" 
+				+ "가격 : " + getPrice() + " 원\n" 
+				+ "수량 : " + getQuantitiy() +" 개\n" 
+				+ "총 구매 가격 : " + Integer.toString(getPrice() * getQuantitiy()) + " 원";
 	}
 }

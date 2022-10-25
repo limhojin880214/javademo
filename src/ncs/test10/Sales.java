@@ -15,6 +15,6 @@ public class Sales extends Employee  implements Bonus{
 	}
 	
 	public void incentive(int pay) {
-		
+		System.out.printf("%-10s %-10s %10d", getName(), getDepartment(), getSalary()*1.2, tax() );
 	}
 }

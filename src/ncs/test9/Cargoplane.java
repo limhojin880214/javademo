@@ -7,10 +7,11 @@ public class Cargoplane extends Plane{
 	}
 	
 	public Cargoplane(String planeName, int fuelSize) {
-		super();
+		super(planeName, fuelSize);
 	}
 	
 	public void flight(int distance) {
-	
+		setFuelSize(getFuelSize()-(distance/10*50));
+		System.out.printf("%s\t%d\n", getPlaneName(), getFuelSize());
 	}
 }

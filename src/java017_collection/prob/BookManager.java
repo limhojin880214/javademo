@@ -8,9 +8,9 @@ public class BookManager {
 	public static int getRentalPrice(ArrayList<BookDTO> bookList, String kind) {
 		// 구현하세요.
 		int sum = 0;
-		for(BookDTO it :bookList) {
-			if(it.getKind().equals(kind)) {
-				sum += it.getRentalPrice();
+		for(BookDTO dto :bookList) {
+			if(dto.getKind().equals(kind)) {
+				sum += dto.getRentalPrice();
 			}
 		}
 

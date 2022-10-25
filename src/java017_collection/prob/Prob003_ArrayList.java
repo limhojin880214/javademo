@@ -51,14 +51,11 @@ public class Prob003_ArrayList {
 				sp.setMaker(d[4]);
 				data.add(sp);
 			}
-
-			return data;
-			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		return null;
+		} 
+		return data;
 	}//end phoneProduct( )
 	
 	private static void prnDisplay(ArrayList<SmartPhone> phoneList){

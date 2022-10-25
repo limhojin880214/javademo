@@ -19,7 +19,7 @@ public class Prob006_ArrayList {
 		 aList.add(new Kospi("삼성전자",10000,"상승가[2000]"));
 		 aList.add(new Kospi("현대차",8000,"하락가[-1000]"));
 		 aList.add(new Kospi("POSCO",8500,"보합[0]"));
-		 aList.add(new Kospi("JHTA",7000,"상승가[2500]"));	
+		 aList.add(new Kospi("NAVER",7000,"상승가[2500]"));	
 		 prnDisplay(aList);
 	}//end main()
 	
@@ -27,9 +27,12 @@ public class Prob006_ArrayList {
 		//상승 종목을 출력하는 프로그램을 구현하시오.
 		for(Kospi data : aList) {
 			if(data.getFluctuation().contains("상승가")) {
+				int open = data.getFluctuation().indexOf("[");
+				int close = data.getFluctuation().indexOf("]");
+				//int close = data.getFluctuation().length()-1;
 				System.out.println("주가종목 : " + data.getStock());
 				System.out.println("현재가격 : " + data.getPrice());
-				System.out.println("등락가격 : " + data.getFluctuation().substring(4, data.getFluctuation().length()-1));
+				System.out.println("등락가격 : " + data.getFluctuation().substring(open+1, close));
 				System.out.println();
 			}
 			

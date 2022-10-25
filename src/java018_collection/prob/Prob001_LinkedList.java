@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Vector;
 
 /*
  * LinkedList
@@ -28,20 +27,26 @@ public class Prob001_LinkedList {
 		 */
 
 		File path = new File(".\\src\\java018_collection\\prob\\booklist.txt");
-		LinkedList<String> Stack = new LinkedList<String>();
+		LinkedList<Book> stack = new LinkedList<Book>();
 		try(Scanner sc = new Scanner(path)){
 			while(sc.hasNextLine()) {
-				Stack.push(new String(sc.nextLine()));
+				String[] arr = sc.nextLine().split("/");
+				Book bk = new Book(arr[0], arr[1], arr[2], arr[3]);
+				stack.push(bk);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.printf("%16s\t%10s\t%8s\t%2s\n", "title", "publisher", "writer", "price");
-		for(String data : Stack) {
-			String[] arr = data.split("/");
-			System.out.printf("%-16s\t%-10s\t%-10s\t%2s\n", arr[0], arr[1], arr[2], arr[3]);
-			
+		System.out.printf("%-16s\t%9s\t%8s\t%2s\n", "title", "publisher", "writer", "price");
+//		for(Book data : Stack) {
+//			System.out.printf("%-16s\t%-10s\t%-10s\t%2s\n", data.getTitle(), data.getPublisher(), data.getWriter(), data.getPrice());
+//			
+//		}
+		
+		while(!stack.isEmpty()) {
+			Book data = stack.pop();
+			System.out.printf("%-16s\t%-10s\t%-10s\t%2s\n", data.getTitle(), data.getPublisher(), data.getWriter(), data.getPrice());
 		}
 		
 	

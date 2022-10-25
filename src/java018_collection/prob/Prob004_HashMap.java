@@ -3,6 +3,7 @@ package java018_collection.prob;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 /*
  * [출력결과]
  * 찾는 도서명을 입력 :java
@@ -39,18 +40,38 @@ public class Prob004_HashMap {
 			Scanner sc = new Scanner(System.in);
 			System.out.print("찾는 도서명을 입력 :");
 			String search = sc.nextLine();
-			int cnt = 0;
-			for(BookShop data : bs) {
-				if(search.contains(data.getTitle())) {
-					System.out.println("책이름 : " + data.getTitle());
-					System.out.println("책저자 : " + data.getAuthor());
-					System.out.println("페이지 : " + data.getPage());
-					System.out.println();
-					cnt++;
-				} 	
-			}
-			if(cnt == 0)System.out.println("찾는 도서가 없습니다.");
+//			int cnt = 0;
+//			for(BookShop data : bs) {
+//				if(data.getTitle().contains(search)) {
+//					System.out.println("책이름 : " + data.getTitle());
+//					System.out.println("책저자 : " + data.getAuthor());
+//					System.out.println("페이지 : " + data.getPage());
+//					System.out.println();
+//					cnt++;
+//				} 	
+//			}
+//			if(cnt == 0) {
+//				System.out.println("찾는 도서가 없습니다.");
+//				System.out.println();
+//			}
+			
+			
+			boolean chk = false;
+			
+				if(map.get(search)==null) {
+					if(!chk)
+						System.out.println("찾는 도서가 없습니다.");
+				}else {
+					BookShop bShop = map.get(search);
+					System.out.println("책이름 : " + bShop.getTitle());
+					System.out.println("책저자 : " + bShop.getAuthor());
+					System.out.println("페이지 : " + bShop.getPage());
+				}
+				
+			
+			
 		}
+
 		
 	}
 	

@@ -16,9 +16,9 @@ public class ExceptionTest {
 					ing = false;
 					throw new InvalidException("입력 값에 오류가 있습니다.");
 				}else {
-					cal.getSum(data);
+					System.out.println("결과값 : " + cal.getSum(data));
 				}
-				System.out.println("결과값 : " + cal.getSum(data));
+				
 			}catch(InvalidException ex) {
 				
 			}

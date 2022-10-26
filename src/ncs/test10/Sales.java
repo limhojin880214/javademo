@@ -14,7 +14,9 @@ public class Sales extends Employee  implements Bonus{
 		return this.getSalary()*0.13;
 	}
 	
+	@Override
 	public void incentive(int pay) {
-		System.out.printf("%-10s %-10s %10d", getName(), getDepartment(), getSalary()*1.2, tax() );
+		setSalary((int)(pay*1.2 + (double)getSalary()));
+		System.out.printf("%-10s %-10s %10d %10.1f\n", getName(), getDepartment(), getSalary(), tax() );
 	}
 }

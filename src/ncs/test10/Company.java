@@ -30,10 +30,14 @@ public class Company {
 		
 		System.out.println();
 		System.out.println("인센티브 100 지급");
-		System.out.printf("%-10s %-10s %10s\n", "name", "department", "salary");
-		System.out.println("--------------------------------");
+		System.out.printf("%-10s %-10s %10s %10s\n", "name", "department", "salary" , "tax");
+		System.out.println("---------------------------------------------");
+		
 		for(Employee data : employees) {
-			
+			if(data.getDepartment().equals("secretary"))
+				((Secretary) data).incentive(100);
+			else if(data.getDepartment().equals("sales"))
+				((Sales) data).incentive(100);
 		}
 			
 	}

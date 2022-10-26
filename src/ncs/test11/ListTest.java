@@ -17,18 +17,23 @@ public class ListTest {
 			}
 		}
 		//System.out.println(list);
-		display(list);
+
 		 //명시한 사용 데이터를 list 에 기록한다.
 		 // list 의 데이터를 내림차순 정렬한다.
 		 
 		 // display() 메소드를 호출한다.
 
+		System.out.print("정렬전 :");
+		display(list);
+		System.out.println();
+		System.out.print("정렬후 :");
+		list.sort(new Decending());
+		display(list);
 	}
 	
 	public static void display(List list) {
-		
-		System.out.println("정렬전 :"+list.toString());
-		list.sort(new Decending());
-		System.out.println("정렬후 :"+list.toString());
+		for(Object data : list) {
+			System.out.printf(" %d ",data);
+		}
 	}
 }

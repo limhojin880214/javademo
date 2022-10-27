@@ -78,9 +78,7 @@ public class Active {
 	}//end readGoods()
 	
 	static void updateGoods() {
-		for (Goods data : gList) {
-			System.out.println(data.toString());
-		}
+		readGoods();
 		System.out.print("수정할 상품명 입력:");
 		String update = sc.next();
 		
@@ -108,9 +106,7 @@ public class Active {
 	}//end updateGoods(String name)
 	
 	static void deleteGoods() {
-		for (Goods data : gList) {
-			System.out.println(data.toString());
-		}
+		readGoods();
 		System.out.print("삭제할 상품명 입력:");
 		String delete = sc.next();
 		boolean ck = true;	//상품 유무
@@ -124,9 +120,7 @@ public class Active {
 		}
 		if(ck)System.out.println("해당 상품은 없습니다.");
 		System.out.println("==========================================================================");
-		for (Goods data : gList) {
-			System.out.println(data.toString());
-		}
+		readGoods();
 	}//end deleteGoods()
 	
 	static void saveData() {

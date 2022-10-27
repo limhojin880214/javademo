@@ -1,4 +1,4 @@
-package nsc.prob.test4;
+package nsc.prob.test04;
 
 import java.util.Scanner;
 

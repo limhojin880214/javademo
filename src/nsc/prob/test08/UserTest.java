@@ -1,4 +1,4 @@
-package nsc.prob.test8;
+package nsc.prob.test08;
 
 public class UserTest {
 

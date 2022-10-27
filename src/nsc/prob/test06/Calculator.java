@@ -1,4 +1,4 @@
-package nsc.prob.test6;
+package nsc.prob.test06;
 
 public class Calculator {
 	double sum = 1.0;

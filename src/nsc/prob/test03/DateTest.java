@@ -1,4 +1,4 @@
-package nsc.prob.test3;
+package nsc.prob.test03;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

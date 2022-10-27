@@ -1,4 +1,4 @@
-package nsc.prob.test5;
+package nsc.prob.test05;
 
 public class BookArrayTest {
 

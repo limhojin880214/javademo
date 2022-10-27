@@ -1,4 +1,4 @@
-package nsc.prob.test9;
+package nsc.prob.test09;
 
 abstract class Plane {
 	private String planeName;

@@ -1,4 +1,4 @@
-package nsc.prob.test1;
+package nsc.prob.test01;
 
 public class ArrayTest {
 

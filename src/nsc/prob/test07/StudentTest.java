@@ -1,4 +1,4 @@
-package nsc.prob.test7;
+package nsc.prob.test07;
 
 public class StudentTest {
 

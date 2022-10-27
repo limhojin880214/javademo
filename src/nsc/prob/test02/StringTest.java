@@ -1,4 +1,4 @@
-package nsc.prob.test2;
+package nsc.prob.test02;
 
 public class StringTest {
 	public static void main(String args[]) {

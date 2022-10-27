@@ -1,4 +1,4 @@
-package nsc.prob.test9;
+package nsc.prob.test09;
 
 public class Airplane extends Plane{
 

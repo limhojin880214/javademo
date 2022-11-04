@@ -73,6 +73,7 @@ public class GoodsDAO {
 		}finally {
 			try {
 				conn.setAutoCommit(true);
+				
 				exit();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -176,4 +177,40 @@ public class GoodsDAO {
 		return chk;
 	}//end deleteGoods()
 
+	public void checkTable() {
+		try {
+			conn = init();
+			conn.setAutoCommit(false);
+			//테이블이 없다면 테이블을 생성하라
+			int cnt = 0;
+			stmt = conn.createStatement();
+			String sql = "SELECT COUNT(*) cnt FROM ALL_TABLES WHERE TABLE_NAME = 'GOODS'";
+			rs = stmt.executeQuery(sql);
+			while(rs.next()) {
+				cnt = rs.getInt("cnt");
+			}
+			if(cnt == 0) {
+				sql="CREATE TABLE goods("
+						+ "name varchar2(100), "
+						+ "price number(10), "
+						+ "amount number(10))";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}finally {
+			try {
+				conn.setAutoCommit(true);
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}//end createTable
 }//end GoodsDAO

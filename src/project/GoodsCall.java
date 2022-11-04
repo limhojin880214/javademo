@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class GoodsCall {
 	private static Scanner sc = new Scanner(System.in);
 	
+	public static void checkTable(GoodsController gController) {
+		gController.tableProcess();
+	}//end createTable
+	
 	public static void readGoods(GoodsController gController) {
 		List<GoodsDTO> aList = gController.readProcess();
 		System.out.printf("%-4s %4s %4s\n", "상품명", "단가", "재고");

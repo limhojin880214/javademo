@@ -7,9 +7,10 @@ public class Program {
 	public static void main(String[] args) {
 		GoodsController gController = new GoodsController();
 		Scanner sc = new Scanner(System.in);
-
+		
 		while (true) {
 			try {
+				GoodsCall.checkTable(gController);
 				System.out.println();
 				System.out.println("==========================================================================");
 				System.out.println("1. 상품 추가 / 2. 재고 정보 / 3. 상품 정보 수정 / 4. 상품 제거 / 5. 종료");
@@ -39,6 +40,7 @@ public class Program {
 				case 5:
 					System.out.println("==========================================================================");
 					System.out.println("프로그램 종료");
+					sc.close();
 					System.exit(0);
 				}// end switch
 				}catch(NumberFormatException ex) {

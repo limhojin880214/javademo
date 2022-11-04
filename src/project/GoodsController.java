@@ -24,4 +24,8 @@ public class GoodsController {
 	public int deleteProcess(String name) {
 		return dao.deleteGoods(name);
 	}
+	
+	public void tableProcess() {
+		dao.checkTable();
+	}
 }
